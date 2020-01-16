@@ -1,0 +1,11 @@
+mixin cart(title, descr, price, href)
+  a.cart(href=`${href}`, class=attributes)
+    .cart__content
+      h5.cart__title!=title
+      p.cart__descr!=descr
+      span.cart__price
+        !=price 
+        | $
+      i.cart__action.icon-arrow-right
+
+      

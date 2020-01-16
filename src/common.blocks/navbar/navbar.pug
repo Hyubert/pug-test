@@ -1,0 +1,16 @@
+.navbar
+  .container
+    .navbar__container
+      +nav-tabs([
+        {text: 'Home', href: '#0'},
+        {text: 'We buy', href: '#0', dropdown: {
+          text: ['Buy 1', 'Buy 2', 'Buy 3'], href: ["#0", "#0", "#0"]}
+        },
+        {text: 'Products', href: '#0'},
+        {text: 'Production', href: '#0', dropdown: {
+          text: ['Product 1', 'Product 2', 'Product 3'], href: ["#0", "#0", "#0"]}
+        },
+        {text: 'About', href: '#0'},
+        {text: 'Contact', href: '#0'},
+      ])
+      +humburger()

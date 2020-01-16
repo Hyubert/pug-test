@@ -1,0 +1,18 @@
+//- Nav mixins
+mixin nav(type,items)
+	ul.nav(class=`${type}`)
+		each item in items
+			unless item.dropdown
+				li.nav__item
+					a.nav__link(href=`${item.href}`)= item.text
+			else
+				+dropdown(item.text, item.href, item.dropdown)
+					
+mixin nav-tabs(items)
+	+nav("nav--tabs",items)
+			
+mixin nav-stacked(items)
+	+nav("nav--stacked",items)
+
+
+			  

@@ -1,0 +1,18 @@
+@function em($px, $base: $font-size-base) {
+  @return ($px / $base) * 1em;
+}
+
+@function rem($px, $base: $font-size-base) {
+  @return ($px / $base) * 1rem;
+}
+
+@function vw($px, $max-width: 1920) {
+  @return ($px / ($max-width * 0.01) ) + vw
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }     // Chrome, Opera, Safari
+  &::-moz-placeholder { @content; }              // Firefox 19+
+  &:-ms-input-placeholder { @content; }          // IE 10+
+  &:-moz-placeholder { @content; }               // Firefox 18-
+}

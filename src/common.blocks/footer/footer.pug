@@ -1,0 +1,27 @@
+.footer
+  .container
+    .footer__container
+      .footer__item.footer__logo
+        +logo('logo.png', false)
+      .footer__item
+        +nav-stacked([
+          {text: 'Buy', href: '#0'},
+          {text: 'Product', href: '#0'},
+          {text: 'Contact', href: '#0'}
+        ])
+      .footer__item
+        +nav-stacked([
+          {text: 'Buy', href: '#0'},
+          {text: 'Products', href: '#0'},
+          {text: 'About', href: '#0'}
+        ])
+      .footer__item
+        .phone.footer__phone
+          a(href="tel:0000000000").phone__number 0000000000
+          a(href="tel:0000000000").phone__action Call me
+          a(href="tomail:test@site.com").phone__email test@site.com
+      .footer__item
+        .address.footer__address
+          p.address__descr Some kind of address, 13
+          p.address__descr 00-00 to 00-00
+          

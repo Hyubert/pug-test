@@ -1,0 +1,5 @@
+mixin cart-advantage(descr, icon)
+  .cart-advantage(class=attributes)
+    .cart-advantage__icon
+      img(src=`img/cart-advantage__icon--${icon}.png`, alt="")
+    p.cart-advantage__descr!= descr

@@ -1,0 +1,22 @@
+.address {
+
+  &--icon {
+    position: relative;
+    padding-left: 37px;
+    &:before {
+      content: '\e903';
+      font-family: 'fonts';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      font-size: 30px;
+      color: $smail-green;
+    }
+  }
+
+  &__descr {
+    margin: 0 0 4px;
+  }
+
+}

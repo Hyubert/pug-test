@@ -1,0 +1,17 @@
+- 
+  var sales = [ 
+    {title: 'Lorem ipsum dolor sit amet.', href: '#0'},
+    {title: 'Lorem ipsum dolor sit amet.', href: '#0'},
+    {title: 'Lorem ipsum dolor sit amet.', href: '#0'},
+    {title: 'Lorem ipsum dolor sit amet.', href: '#0'},
+    {title: 'Lorem ipsum dolor sit amet.', href: '#0'},
+    {title: 'Lorem ipsum dolor sit amet.', href: '#0'},
+  ];
+
+.sales.bg--green
+  .container
+    +headline('Production')('headline--center headline--white')
+    .row
+      each sale in sales
+        .col-12.col-sm-6.col-lg-2
+          +cart-sale(sale.title, sale.href)

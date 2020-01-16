@@ -1,0 +1,6 @@
+mixin modal(size)
+  .modal&attributes(attributes)
+    .modal__dialog(class=`modal__dialog--${size}`)
+      button.close
+      .modal__content
+        block

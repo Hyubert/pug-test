@@ -1,0 +1,22 @@
+.cart-advantage {
+
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 18px;
+    user-select: none;
+  }
+
+  &__descr {
+    margin: 0;
+    letter-spacing: .75px;
+  }
+
+  &--nowrap {
+    @include media('>=xl') {
+      white-space: nowrap;
+    }
+  }
+
+}

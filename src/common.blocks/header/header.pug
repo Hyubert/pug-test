@@ -1,0 +1,10 @@
+.header
+  .container
+    .header__container
+      +logo('logo.png')('header__logo')
+      .address.address--icon.header__address
+        p.address__descr Some kind of address, 13
+        a(href="tomail:test@site.com") test@site.com
+      a.phone.phone--icon(href="tel:00000000000")
+        span.phone__number 0000 00 00 00
+        span.phone__action Call me

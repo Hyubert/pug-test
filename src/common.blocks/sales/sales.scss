@@ -1,0 +1,9 @@
+.sales {
+  padding: rem(68px) 0 rem(80px);
+}
+
+@include media('<=xs') {
+  .sales {
+    padding: rem(35px) 0;
+  }
+}

@@ -1,0 +1,70 @@
+.header {
+  padding: 22px 0;
+  border-bottom: 1px solid #eee;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: vw(40);
+    min-width: 30px;
+  }
+
+  &__address {
+    margin-left: rem(75px);
+  }
+}
+
+@include media('<=lg') {
+  .header {
+    &__address {
+      margin-left: 0;
+    }
+  }
+}
+
+@include media('<=sm') {
+  .header {
+    &__address {
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media('<=xxs') {
+  .header {
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__logo {
+      .logo__mob {
+        display: none;
+      }
+      .logo__img {
+        display: block;
+        min-width: 150px;
+      }
+    }
+    &__address {
+      // display: none;
+      padding-left: 40px;
+      margin-top: 25px;
+      order: 3;
+      flex: 1 0 100%;
+      &:before {
+        display: block;
+      }
+    }
+    .phone {
+      &--icon {
+        padding-left: 30px;
+      }
+    }
+  }
+}

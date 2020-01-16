@@ -1,0 +1,5 @@
+mixin cart-sale(title, href)
+  a.cart-sale(href=`${href}`)
+    .cart-sale__content
+      h6.cart-sale__title!= title
+      i.cart-sale__action.icon-arrow-right

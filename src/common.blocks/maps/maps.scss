@@ -1,0 +1,10 @@
+.maps {
+  width: 100%;
+  height: vw(502);
+  min-height: 300px;
+  overflow: hidden;
+
+  @include media("<=sm") {
+    min-height: 200px;
+  }
+}

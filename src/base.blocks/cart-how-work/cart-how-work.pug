@@ -1,0 +1,11 @@
+mixin cart-how-work(descr, pos, icon)
+  .cart-how-work(data-dashoffset=`${pos}`)
+    .cart-how-work__icon
+      svg.cart-how-work__svg
+        circle(cx="60", cy="60", r="50", fill="none", stroke="#438dff", stroke-width="2", stroke-dasharray="6")
+        circle.cart-how-work__circle(cx="60", cy="60", r="50", fill="none", stroke="#438dff", stroke-width="7", stroke-dasharray="314" stroke-dashoffset="314")
+        
+      img.cart-how-work__img(src=`img/cart-how-work__img--${icon}.png`, alt="")
+      
+    p.cart-how-work__descr!= descr
+    

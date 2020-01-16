@@ -1,0 +1,15 @@
+- 
+  var titles = [ 
+    'Lorem ipsum dolor sit amet.',
+    'Lorem ipsum dolor sit amet.',
+    'Lorem ipsum dolor sit amet.',
+    'Lorem ipsum dolor sit amet.'
+  ];
+
+.advantage
+  .container
+    .row
+      each title, i in titles
+        .col-6.col-lg-3
+          +cart-advantage(title, i+1)
+

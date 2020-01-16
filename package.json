@@ -1,0 +1,28 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "css-mqpacker": "^6.0.2",
+    "cssnano": "^4.1.10",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "postcss-csscomb": "^1.0.2",
+    "postcss-uncss": "^0.16.1",
+    "sort-css-media-queries": "^1.3.4",
+    "uncss": "^0.16.1"
+  },
+  "scripts": {
+    "dev": "gulp"
+  }
+}

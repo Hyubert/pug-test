@@ -1,0 +1,33 @@
+-
+  var faqs = [
+    {
+      title: 'Lorem ipsum dolor sit amet 1.',
+      descr: [
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda natus voluptates molestiae expedita facilis repellendus id. Nihil nemo consequatur dolorem.'
+      ],
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet 2.',
+      descr: [
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. <b>Assumenda natus</b> -  voluptates molestiae expedita facilis repellendus id. Nihil nemo consequatur dolorem.',
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda natus voluptates molestiae expedita facilis repellendus id. Nihil nemo consequatur dolorem.',
+      ],
+      class: 'collapse--open'
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet 3.',
+      descr: [
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+        ['name 1', 'name 2', 'name 3'],
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+        'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+      ],
+    },
+  ] 
+
+.faqs.bg--gray
+  .container
+    +headline('FAQs')('headline--center')
+    .faqs__container
+      each faq in faqs
+        +collapse(faq.title, faq.descr)(class=faq.class ? faq.class : '')

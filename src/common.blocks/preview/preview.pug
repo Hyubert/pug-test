@@ -1,0 +1,76 @@
+include ./section
+
+
+.preview
+  +sc('white')
+    +headline('Navigation')('headline--center')
+    .preview__row
+      h4 Stacked
+      +nav-stacked([
+        {text: 'We buy', href: '#0'},
+        {text: 'Products', href: '#0'},
+        {text: 'Contacts', href: '#0'}
+      ])
+    .preview__row
+      h4 Tabs
+      +nav-tabs([
+        {text: 'Home', href: '#0'},
+        {text: 'We buy', href: '#0', dropdown: {
+          text: ['Buy 1', 'Buy 2', 'Buy 3'], href: ["#0", "#0", "#0"]}
+        },
+        {text: 'Products', href: '#0'},
+        {text: 'Production', href: '#0', dropdown: {
+          text: ['Product 1', 'Product 2', 'Product 3'], href: ["#0", "#0", "#0"]}
+        },
+        {text: 'About', href: '#0'},
+        {text: 'Contact', href: '#0'},
+      ])
+
+  
+  +sc('gray')
+    +headline('Modals')('headline--center')
+    
+    +button('Call me')(class="button--primary button--md" data-modal="#order-call")
+    +button('Get start')(class="button--out-primary button--md" data-modal="#submit-application")
+        
+    
+  +sc('green')
+    +headline('Grid')('headline--center headline--white')
+    include ../layouts/layouts
+      
+  +sc('white')  
+    +headline('Buttons')('headline--center')
+    .row
+      .col-12.col-md-6
+        +button('Submit')(class="button--primary button--sm")
+        +button('Submit')(class="button--primary button--md")
+        +button('Submit')(class="button--primary button--lg button--circle")
+        
+      .col-12.col-md-6
+        +button('Submit')(class="button--out-primary button--sm")
+        +button('Submit')(class="button--out-primary button--md")
+        +button('Submit')(class="button--out-primary button--lg button--circle")
+  
+  //- use
+  include ../sales/sales
+      
+  //- use
+  include ../faqs/faqs
+
+
+  +modal('sm')(id="order-call", class="modal--default")
+    h2 Call me
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, non magnam.
+    form
+      +input('text', 'Name', true)(class="input--circle input--primary")
+      +input('tel', 'Phone', true)(class="input--circle input--primary")
+      +input('submit', 'Submit')(class="button--primary button--md button--circle")
+      
+    
+  +modal('sm')(id="submit-application", class="modal--default")
+    h2 Buy
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, non magnam.
+    form
+      +input('text', 'Name', true)(class="input--circle input--primary")
+      +input('tel', 'Phone', true)(class="input--circle input--primary")
+      +input('submit', 'Submit')(class="button--primary button--md button--circle")

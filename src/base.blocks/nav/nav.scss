@@ -1,0 +1,48 @@
+.nav {
+
+  $this: &;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 101;
+
+  &--active {
+    display: flex !important;
+  }
+
+  &--tabs {
+    flex-direction: row;
+    #{$this}__item {
+      &:not(:last-child) {
+        margin-right: rem(49px);
+      }
+    }
+  }
+
+  &--stacked {
+    flex-direction: column;
+    #{$this}__item {
+      &:not(:last-child) {
+        margin-bottom: rem(10px);
+      }
+    }
+  }
+
+
+  &__link {
+    display: inline-block;
+    font-size: em(16px);
+    font-weight: 500;
+    color: $nav-base;
+    letter-spacing: .25px;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $nav-hover-base;
+    }
+  }
+}

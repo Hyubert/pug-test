@@ -1,0 +1,63 @@
+.navbar {
+  position: relative;
+  padding: 16px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    &--tabs {
+      flex-wrap: nowrap;
+    }
+  }
+
+}
+
+@include media('<=xl') {
+  .navbar {
+    .nav {
+      &--tabs {
+        width: 100%;
+        justify-content: space-between;
+        .nav__item {
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include media('<=md') {
+  .navbar {
+    .nav {
+      position: absolute;
+      top: calc(100% - 1px);
+      left: 0;
+      display: none;
+      background: #fff;
+      flex-direction: column;
+      padding: 15px $gutter;
+      border-top: 1px solid #eee;
+
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: rem(10px);
+        }
+      }
+
+      .dropdown__menu {
+        position: static;
+        box-shadow: none;
+      }
+
+      .dropdown__link {
+        padding-left: 20px;
+      }
+    }
+  }
+}

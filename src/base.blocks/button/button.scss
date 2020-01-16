@@ -1,0 +1,62 @@
+.button {
+
+  // default
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+
+  // size
+
+  &--lg {
+    padding: rem(10px) rem(24px);
+    font-size: em(18px);
+  }
+
+  &--md {
+    padding: rem(14px) rem(35px);
+    font-size: em(16px);
+  }
+
+  &--sm {
+    padding: rem(6px) rem(12px);
+    font-size: em(14px);
+  }
+
+  // style
+
+  &--circle {
+    border-radius: 24px;
+  }
+
+
+  // color
+
+  &--primary {
+    border-color: $smail-green;
+    background-color: $smail-green;
+    color: $white;
+    &:hover,
+    &:focus {
+      border-color: darken($smail-green, 10%);
+      background-color: darken($smail-green, 10%);
+    }
+  }
+
+  &--out-primary {
+    border-color: $smail-green;
+    background-color: $white;
+    color: $smail-green;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $smail-green;
+    }
+  }
+
+}

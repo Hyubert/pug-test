@@ -1,0 +1,102 @@
+.collapse {
+  $this: &;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__title-cont {
+    position: relative;
+    background: #fff;
+    cursor: pointer;
+    border-left: 8px solid $smail-green;
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: rem(17px) rem(30px);
+    padding-right: rem(65px);
+    font-size: em(16px);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background: rgba($smail-green, .3);
+    pointer-events: none;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 14px;
+      height: 2px;
+      margin: -1px -7px;
+      background: $smail-green;
+    }
+
+    &:after {
+      transform: rotateZ(-90deg);
+      transition: transform .2s ease;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s linear;
+  }
+
+  &__descr {
+    margin: rem(20px) rem(35px) 0;
+    line-height: 1.5;
+  }
+
+  &__list {
+    margin: rem(20px) rem(35px) 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: rem(5px);
+      padding-left: rem(15px);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: rem(9px);
+        left: 0;
+        line-height: 1;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $smail-green;
+      }
+    }
+  }
+
+  &--open {
+
+    #{$this}__content {
+      max-height: 450px;
+    }
+
+    #{$this}__icon {
+      &:after {
+        transform: rotateZ(0);
+      }
+    }
+  }
+
+}

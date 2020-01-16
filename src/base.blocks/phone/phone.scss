@@ -1,0 +1,73 @@
+.phone {
+
+  &--icon {
+    position: relative;
+    padding-left: 43px;
+
+    &:before {
+      content: "\e901";
+      font-family: 'fonts';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      font-size: 30px;
+      color: $smail-green;
+    }
+  }
+
+  &:hover {
+    color: inherit;
+  }
+
+
+  &__number {
+    display: block;
+    font-size: em(18px);
+    font-weight: bold;
+    &:hover {
+      color: $smail-green;
+    }
+  }
+
+  &__action {
+    position: relative;
+    display: inline-block;
+    color: $smail-green;
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px dashed $smail-green;
+      transition: border-color .3s ease;
+    }
+    &:hover {
+      color: #387e6f;
+      &:after {
+        border-color: #387e6f;
+      }
+    }
+  }
+
+  &__email {
+    display: block;
+    margin-top: 5px;
+  }
+
+  @include media('<=md') {
+    span {
+      display: none;
+    }
+  }
+
+}
+
+@include media('<=lg') {
+  .phone {
+    &__number {
+      font-size: em(16px);
+    }
+  }
+}

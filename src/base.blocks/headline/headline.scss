@@ -1,0 +1,18 @@
+.headline {
+
+  &--center {
+    text-align: center;
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &__title {
+    display: inline-block;
+    margin: 0 0 rem(16px);
+    font-size: em(30px);
+    font-weight: 700;
+    letter-spacing: .25px;
+  }
+}

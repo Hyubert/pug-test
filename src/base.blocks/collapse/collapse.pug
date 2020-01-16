@@ -1,0 +1,13 @@
+mixin collapse(title, descr)
+  .collapse()&attributes(attributes)
+    .collapse__title-cont
+      h3.collapse__title!= title
+      span.collapse__icon
+    .collapse__content
+      each item in descr
+        if typeof item === 'object'
+          ul.collapse__list
+            each li in item
+              li!= li
+        else
+          p.collapse__descr!= item

@@ -1,0 +1,8 @@
+mixin input(type, placeholder, isRequired)
+  if type !== 'submit'
+    unless isRequired
+      input.input(type=`${type}`, placeholder=`${placeholder}`)&attributes(attributes)
+    else
+      input.input(type=`${type}`, placeholder=`${placeholder}`, required)&attributes(attributes)
+  else
+    input.button(type="submit", value=`${placeholder}`)&attributes(attributes)

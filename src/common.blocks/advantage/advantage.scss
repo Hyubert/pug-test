@@ -1,0 +1,16 @@
+.advantage {
+  padding: rem(50px) 0 rem(75px);
+
+
+  .cart-advantage {
+    margin-top: rem(30px);
+    @include media('<=xs') {
+      flex-direction: column;
+      text-align: center;
+
+      &__icon {
+        margin-right: 0;
+      }
+    }
+  }
+}

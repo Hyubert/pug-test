@@ -1,0 +1,16 @@
+- 
+  var works = [ 
+    {title: 'Lorem ipsum dolor<br> sit amet.', dashaarray: '235.5'},
+    {title: 'Lorem ipsum dolor<br> sit amet.', dashaarray: '157'},
+    {title: 'Lorem ipsum dolor<br> sit amet.', dashaarray: '78.5'},
+    {title: 'Lorem ipsum dolor<br> sit amet.', dashaarray: '0'},
+  ];
+
+#how-work-section.how-work
+  .container
+    +headline('How work')('headline--center')
+    .row
+      each work, i in works
+        .col-6.col-lg-3
+          +cart-how-work(work.title, work.dashaarray, i+1)
+

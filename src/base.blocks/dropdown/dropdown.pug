@@ -1,0 +1,7 @@
+mixin dropdown(text, href, obj={})
+  li.dropdown.nav__item
+    a.dropdown__toggle.nav__link(href=`${href}`)!= text
+    ul.dropdown__menu
+      each value, index in obj.text
+        li.dropdown__item
+          a.dropdown__link(href=`${obj.href[index]}`)= value

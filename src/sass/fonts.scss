@@ -1,0 +1,18 @@
+@mixin font-face($name, $source, $bold: normal, $italic: normal) {
+	@font-face {
+		font-display: auto;
+		font-family: $name;
+		src: url($source + ".ttf");
+		src: url($source + ".woff") format('woff');
+		font-weight: $bold;
+		font-style: $italic;
+	}
+}
+
+$font-name: 'GothamPro';
+
+@include font-face($font-name, '../fonts/#{$font-name}/#{$font-name}-Black', 900)
+@include font-face($font-name, '../fonts/#{$font-name}/#{$font-name}-Bold', 700)
+@include font-face($font-name, '../fonts/#{$font-name}/#{$font-name}-Medium', 500)
+@include font-face($font-name, '../fonts/#{$font-name}/#{$font-name}', 400)
+@include font-face($font-name, '../fonts/#{$font-name}/#{$font-name}-Light', 300)
