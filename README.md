@@ -10,8 +10,8 @@
 
 Чтобы запустить проект
 
-``` git clone https://github.com/Hyubert/pug-test.git ```
-``` npm i ```
+``` git clone https://github.com/Hyubert/pug-test.git ```  
+``` npm i ```  
 ``` npm run dev ```
 
 ***
@@ -25,4 +25,4 @@
 4. Loop
 ***
 
-Include 
+#Include 
