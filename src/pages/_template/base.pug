@@ -13,6 +13,7 @@ include ../../base.blocks/logo/logo
 include ../../base.blocks/cart-advantage/cart-advantage
 include ../../base.blocks/cart-how-work/cart-how-work
 
+block options
 
 doctype html
 html(lang="ru-RU")
@@ -21,6 +22,7 @@ html(lang="ru-RU")
     meta(http-equiv='X-UA-Compatible', content="IE=edge")
     meta(name="viewport" content="width=device-width,initial-scale=1")
     meta(name="keywords" content="")
+    title= options && options.title ? options.title : 'Not found title'
     link(rel="stylesheet" type='text/css' href="css/index.css")
     block head
 

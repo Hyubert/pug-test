@@ -1,13 +1,15 @@
 extends ../_template/landing.pug
 
-block head
-  title
-    | products page
+block options
+  - 
+    var options = {
+      title: 'product page',
+    };
+
 
 
 block main
   include ../../common.blocks/navbar/navbar
-  include ../../common.blocks/hero/hero
   include ../../common.blocks/hero/hero
   include ../../common.blocks/advantage/advantage
   include ../../common.blocks/sales/sales

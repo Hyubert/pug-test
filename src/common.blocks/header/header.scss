@@ -16,6 +16,10 @@
   &__address {
     margin-left: rem(75px);
   }
+
+  &--dark {
+    background: $grey;
+  }
 }
 
 @include media('<=lg') {

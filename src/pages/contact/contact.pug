@@ -1,8 +1,14 @@
 extends ../_template/landing.pug
 
-block head
-  title
-    | contact page
+block options
+  - 
+    var options = {
+      title: 'contact page',
+    };
+
+    var layouts = {
+      header: 'header--dark'
+    };
 
 
 block main
